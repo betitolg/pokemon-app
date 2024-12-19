@@ -11,30 +11,23 @@ export const PokemonApp = () => {
 
   console.log(pokemons);
 
-const onAgregarPokemon = (pokemon) => {
+  const onAgregarPokemon = (pokemon) => {
+    if (pokemons.includes(pokemon)) return;
 
-if(pokemons.includes(pokemon)) return;  
-
-setPokemons([pokemon, ...pokemons]);
-
-}
-
+    setPokemons([pokemon, ...pokemons]);
+  };
 
   return (
     <>
-    
       <h1></h1>
       <div className="container">
         <Cabecera />
-        <AgregarPokemon onNuevoPokemon={(event)=>onAgregarPokemon(event)}/>
-<ol>
-
- {
-pokemons.map(pokemon => {return <ListaPokemon key={pokemon} pokemon={pokemon}/>})
- }
-
-
-</ol>
+        <AgregarPokemon onNuevoPokemon={(event) => onAgregarPokemon(event)} />
+        <div className="row">
+          {pokemons.map((pokemon) => {
+            return <ListaPokemon key={pokemon} pokemon={pokemon} />;
+          })}
+        </div>
 
         <Footer />
       </div>
