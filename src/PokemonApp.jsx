@@ -7,7 +7,7 @@ import { ListaPokemon } from "./components/ListaPokemon";
 import { useState } from "react";
 
 export const PokemonApp = () => {
-  const [pokemons, setPokemons] = useState(["Pikachu", "squirtle"]);
+  const [pokemons, setPokemons] = useState(["pikachu", "squirtle"]);
 
   console.log(pokemons);
 

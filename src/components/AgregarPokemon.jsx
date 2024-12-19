@@ -11,7 +11,7 @@ export const AgregarPokemon = ({ onNuevoPokemon }) => {
         onSubmit={(e) => {
             e.preventDefault();
           if (valorInput.trim().length <= 1) return;
-          onNuevoPokemon(valorInput.trim().toLowerCase);
+          onNuevoPokemon(valorInput.trim().toLowerCase());
           setValorInput("");
         }}
       >
